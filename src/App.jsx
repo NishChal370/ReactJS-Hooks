@@ -1,8 +1,6 @@
-# useMemo Hooks 
+import { useMemo, useState } from 'react';
+import './App.css';
 
-It is used to optimize performance and only call the function when needed.
-
-```javascript
 function App() {
       const [valueFirst, setValueFirst] = useState(0);
       const [valueSecond, setValueSecond] = useState(0);
@@ -16,7 +14,7 @@ function App() {
       }
 
       /**
-       * Here memo is used so that this function will not be called when
+       * Here memo is used so that the function will not be called when
        * valueSecond changed.
        */
       const isEvenNumber = useMemo( ()=>{
@@ -29,9 +27,9 @@ function App() {
             <div className="App">
                   <button onClick={increaseValueFirst}>Click First value = {valueFirst}</button>
                   <p>First Value is {isEvenNumber}</p>
-                  
                   <button onClick={increaseValueSecond}>Click Second value = {valueSecond}</button>
             </div>
       );
 }
-```
+
+export default App;
