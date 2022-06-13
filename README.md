@@ -7,11 +7,11 @@ function App() {
       const [valueFirst, setValueFirst] = useState(0);
       const [valueSecond, setValueSecond] = useState(0);
 
-      const increaseValueFirst = ()=>{
+      const increaseValueFirstHandler = ()=>{
             setValueFirst(valueFirst+1);
       }
 
-      const increaseValueSecond = ()=>{
+      const increaseValueSecondHandler = ()=>{
             setValueSecond(valueSecond+1);
       }
 
@@ -27,10 +27,10 @@ function App() {
 
       return (
             <div className="App">
-                  <button onClick={increaseValueFirst}>Click First value = {valueFirst}</button>
+                  <button onClick={increaseValueFirstHandler}>Click First value = {valueFirst}</button>
                   <p>First Value is {isEvenNumber}</p>
                   
-                  <button onClick={increaseValueSecond}>Click Second value = {valueSecond}</button>
+                  <button onClick={increaseValueSecondHandler}>Click Second value = {valueSecond}</button>
             </div>
       );
 }
