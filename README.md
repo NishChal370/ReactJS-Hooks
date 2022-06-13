@@ -1,6 +1,7 @@
 # useMemo Hooks 
 
 It is used to optimize performance and only call the function when needed.
+It basically cache the result of invoked function.
 
 ```javascript
 function App() {
